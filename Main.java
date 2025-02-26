@@ -5,12 +5,12 @@ public static void main(String[] args)
 {
     String str;
     int x;
-    Sign sign1 = new Sign("ABC222DE", 3);
+    Sign sign = new Sign("ABC222DE", 3);
 
-    x = sign1.numberOfLines();
+    x = sign.numberOfLines();
     System.out.println(x);
 
-    str = sign1.getLines();
+    str = sign.getLines();
     System.out.println(str);
 }
 

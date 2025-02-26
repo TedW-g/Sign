@@ -18,13 +18,13 @@ public class Sign
     {
         String s = "";
         int i = 0;
-        while (i < message.length());
+        while (i < message.length())
         {
             s += message.substring(i,i+1);
             if (i % width == 0) s += ";" + message.substring(i,i+1);
             i++;
         }
-        return s;
+        return s + "a";
     }
 
 }
