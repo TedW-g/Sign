@@ -11,6 +11,7 @@ public class Sign
 
     public int numberOfLines()
     {
+        if(message.length() % width == 0) return message.length() / width;
         return message.length() / width + 1;
     }
 
@@ -18,13 +19,17 @@ public class Sign
     {
         String s = "";
         int i = 0;
+        if(message.length() == 0) return null;
         while (i < message.length())
         {
             s += message.substring(i,i+1);
-            if (i % width == 0) s += ";" + message.substring(i,i+1);
+            if ((i > 0) && (i+1) % width == 0)
+            {
+                if(i+1 != message.length()) s += ";";
+            }
             i++;
         }
-        return s + "a";
+        return s;
     }
-
+//ABC222DE
 }
